@@ -60,3 +60,18 @@ Also, don´t forget to add this package into your project
 
 Install-Package Microsoft.Azure.Search -Pre
 
+# References 
+
+You could find more information about Azure Search and how to use it with Office 365 in the next links
+
+https://elblogdelprogramador.wordpress.com/2016/01/18/primeros-pasos-con-azure-search-los-indices/
+https://elblogdelprogramador.wordpress.com/2016/01/24/autenticacion-app-only-para-usar-la-api-microsoft-graph-en-webjobs-de-azure/
+https://elblogdelprogramador.wordpress.com/2016/02/02/indexando-contenido-en-el-servicio-azure-search/
+https://azure.microsoft.com/en-us/documentation/articles/search-what-is-azure-search/
+http://www.eliostruyf.com/building-daemon-or-service-app-with-the-microsoft-graph-api/
+https://azure.microsoft.com/en-us/documentation/articles/search-howto-dotnet-sdk/
+http://graph.microsoft.io/en-us/docs
+
+
+
+
