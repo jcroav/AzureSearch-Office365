@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+    <title></title>
+    <link href="css/main.min.css" rel="stylesheet" />
+</head>
+<body ng-app="AzureSearch" ng-controller="SearchController" ng-init="InitSearch()">
+    
+    <h1>Azure Search Example</h1>
+    
+    <div class="search-box">
+        <input type="text" ng-model="content" ng-keyup="Search()" />
+        <button type="button" ng-click="Search()">search</button>
+    </div>
+
+    <h2>Sort</h2>
+
+    <ol>
+        <li ng-click="type = 'Name';Search()" ng-class="{'actived':type=='Name'}">Name</li>
+        <li ng-click="type='Department';Search()" ng-class="{'actived':type=='Department'}">Department</li>
+        <li ng-click="type='Job';Search()" ng-class="{'actived': type=='Job'}">Job</li>
+        <li ng-click="type='Email';Search()" ng-class="{'actived': type=='Email'}">Email</li>
+    </ol>
+
+    <ol>
+        <li ng-click="sort = 'desc';Search()" ng-class="{'actived': sort=='desc'}">Desc</li>
+        <li ng-click="sort = 'asc';Search()" ng-class="{'actived': sort=='asc'}">Asc</li>
+    </ol>
+
+    <h2>Results</h2>
+
+    <ul>
+        <li ng-repeat="result in results">
+            <h3 ng-bind-html="toTrustedHTML(result.Name)"></h3><br />
+            <span ng-bind-html="toTrustedHTML(result.Department)"></span><br />
+            <span ng-bind-html="toTrustedHTML(result.Job)"></span><br />
+            <a href="mailto:{{ result.Email }}">{{ result.Email }}</a>
+        </li>
+    </ul>
+    
+    <script src="Scripts/vendor/angular.min.js"></script>
+    <script src="Scripts/App.js"></script>
+    <script src="Scripts/services/SearchService.js"></script>
+    <script src="Scripts/controllers/SearchController.js"></script>
+</body>
+</html>
